@@ -1,6 +1,6 @@
 import React from 'react';
 import Auxiliary from '../Auxiliary/Auxiliary';
-import ImageData from '../../containers/ImageData/ImageData';
+import Toolbar from '../../containers/Toolbar/Toolbar';
 import classes from './Layout.css';
 
 const layout = () => {
@@ -8,8 +8,7 @@ const layout = () => {
         <Auxiliary>
             <div className={classes.Layout}>
                 <div className={classes.PageWrapper}> 
-                    <ImageData />
-                    <div>Buttons</div>
+                    <Toolbar />
                     <div>Images Grid</div>
                     <div>Saved Queries</div>
                 </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 
-class ImageData extends Component {
+class Toolbar extends Component {
     state = {
         query: ''
     }
@@ -26,4 +26,4 @@ class ImageData extends Component {
     }
 }
 
-export default ImageData;
+export default Toolbar;
