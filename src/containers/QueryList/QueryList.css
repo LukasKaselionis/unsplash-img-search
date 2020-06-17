@@ -1,0 +1,8 @@
+.QueryList {
+    width: 35%;
+    height: 75vh;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 35px;
+}

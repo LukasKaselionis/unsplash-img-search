@@ -2,6 +2,7 @@ import React from 'react';
 import Auxiliary from '../Auxiliary/Auxiliary';
 import Toolbar from '../../containers/Toolbar/Toolbar';
 import ImageList from '../../containers/ImageList/ImageList';
+import QueryList from '../../containers/QueryList/QueryList';
 import classes from './Layout.css';
 
 const layout = () => {
@@ -11,7 +12,7 @@ const layout = () => {
                 <div className={classes.PageWrapper}> 
                     <Toolbar />
                     <ImageList />
-                    <div>Saved Queries</div>
+                    <QueryList />
                 </div>
             </div>
         </Auxiliary>

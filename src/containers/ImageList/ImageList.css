@@ -1,6 +1,8 @@
 .ImageList {
     width: 60%;
     height: 75vh;
+    display: inline-block;
+    margin-right: 25px;
     background-color: rgb(255, 255, 255, 255);
     border: 1px solid rgba(0, 0, 0, 0.6);
     overflow: scroll;
