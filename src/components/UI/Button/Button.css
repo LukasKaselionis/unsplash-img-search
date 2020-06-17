@@ -1,0 +1,26 @@
+.Button {
+    color:black;
+    width: 15%;
+    margin: 0 25px;
+    border-radius: 55px;
+    border: none;
+    padding: 3px 0;
+    outline: none;
+    box-shadow: 0 0 4px 2px rgba(0,0,0, 0.2);
+    cursor: pointer;
+}
+
+.Button:hover {
+    padding: 9px 0;
+    transition: padding 0.2s ease-out;
+}
+
+.Success:hover {
+    background: rgb(39, 172, 39);
+    color: rgb(255, 255, 255);
+}
+
+.Error:hover {
+    background: rgb(172, 0, 0);
+    color: rgb(255, 255, 255);
+}
