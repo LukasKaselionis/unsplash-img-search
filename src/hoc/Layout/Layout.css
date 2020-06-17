@@ -2,3 +2,7 @@
     height: 100vh;
     background-color: #deeede;
 }
+
+.PageWrapper {
+    padding: 55px;
+}

@@ -1,12 +1,18 @@
 import React from 'react';
 import Auxiliary from '../Auxiliary/Auxiliary';
+import ImageData from '../../containers/ImageData/ImageData';
 import classes from './Layout.css';
 
 const layout = () => {
     return (
         <Auxiliary>
             <div className={classes.Layout}>
-                <span>TESTING</span>
+                <div className={classes.PageWrapper}> 
+                    <ImageData />
+                    <div>Buttons</div>
+                    <div>Images Grid</div>
+                    <div>Saved Queries</div>
+                </div>
             </div>
         </Auxiliary>
     )
