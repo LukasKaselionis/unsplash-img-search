@@ -7,6 +7,7 @@ const input = (props) => {
         <input
             className={classes.Input}
             type="search"
+            value={props.query}
             placeholder="Enter images title"
             onChange={props.changed} />
     )
