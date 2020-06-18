@@ -23,7 +23,6 @@ class Layout extends Component {
         })
             .then(response => {
                 console.log(response);
-                console.log(response.config.params.query);
                 console.log(response.data)
                 this.setState({images: response.data.results,  query: response.config.params.query });
             })
@@ -40,7 +39,7 @@ class Layout extends Component {
                 <div className={classes.Layout}>
                     <div className={classes.PageWrapper}>
                         <Toolbar userSubmit={this.onSearchSubmit} />
-                        <ImageList />
+                        <ImageList foundImages={this.state.images} />
                         <QueryList />
                     </div>
                 </div>
