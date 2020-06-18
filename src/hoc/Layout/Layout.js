@@ -26,9 +26,6 @@ class Layout extends Component {
                 console.log(response.config.params.query);
                 console.log(response.data)
                 this.setState({images: response.data.results,  query: response.config.params.query });
-                setTimeout(() => {
-                    console.log(this.state.images);
-                }, 2000);
             })
             .catch(err => {
                 if (err.response) {

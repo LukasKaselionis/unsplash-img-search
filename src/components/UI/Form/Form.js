@@ -8,8 +8,8 @@ const form = (props) => {
     return (
         <form onSubmit={props.onFormSubmit}>
             <Input changed={props.onChange} query={props.query} />
-            <Button title="SEARCH" btnType={btnType} userSubmit={props.onFormSubmit} />
-            <Button title="SAVE" btnType={btnType} />
+            <Button title="SEARCH" btnType={btnType} userSubmit={props.onFormSubmit} disabled={!props.query} />
+            <Button title="SAVE" btnType={btnType} disabled={!props.query} />
         </form>
     );
 };

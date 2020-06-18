@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.Button:disabled {
+    cursor: no-drop;
+}
+
 .Button:hover {
     padding: 9px 0;
     transition: padding 0.2s ease-out;
