@@ -4,12 +4,15 @@ import Auxiliary from '../Auxiliary/Auxiliary';
 import Toolbar from '../../containers/Toolbar/Toolbar';
 import ImageList from '../../containers/ImageList/ImageList';
 import QueryList from '../../containers/QueryList/QueryList';
+import Backdrop from '../../components/UI/Backdrop/Backdrop';
+import Spinner from '../../components/UI/Spinner/Spinner';
 import classes from './Layout.css';
 
 class Layout extends Component {
     state = {
         images: [],
-        query: ''
+        query: '',
+        loading: false
     }
 
     onSearchSubmit = (term) => {
@@ -22,9 +25,12 @@ class Layout extends Component {
             }
         })
             .then(response => {
+                this.setState({ loading: true });
                 console.log(response);
                 console.log(response.data)
-                this.setState({images: response.data.results,  query: response.config.params.query });
+                setTimeout(() => {
+                    this.setState({ images: response.data.results, query: response.config.params.query, loading: false });
+                }, 2000);
             })
             .catch(err => {
                 if (err.response) {
@@ -34,14 +40,21 @@ class Layout extends Component {
     }
 
     render() {
+        let mainContent = <Backdrop />;
+        if (!this.state.loading) {
+            mainContent = (
+                <div className={classes.PageWrapper}>
+                    <Toolbar userSubmit={this.onSearchSubmit} />
+                    <ImageList foundImages={this.state.images} />
+                    <QueryList />
+                </div>
+            )
+        }
+
         return (
             <Auxiliary>
                 <div className={classes.Layout}>
-                    <div className={classes.PageWrapper}>
-                        <Toolbar userSubmit={this.onSearchSubmit} />
-                        <ImageList foundImages={this.state.images} />
-                        <QueryList />
-                    </div>
+                    {mainContent}
                 </div>
             </Auxiliary>
         )
