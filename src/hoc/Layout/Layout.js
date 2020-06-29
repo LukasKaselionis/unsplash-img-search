@@ -45,7 +45,7 @@ class Layout extends Component {
             mainContent = (
                 <div className={classes.PageWrapper}>
                     <Toolbar userSubmit={this.onSearchSubmit} />
-                    <ImageList foundImages={this.state.images} />
+                    <ImageList query={this.state.query} foundImages={this.state.images} />
                     <QueryList />
                 </div>
             )

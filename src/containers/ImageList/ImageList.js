@@ -5,16 +5,14 @@ import classes from './ImageList.css';
 const imageList = (props) => {
 
     const imgs = props.foundImages.map(img => {
-        console.log(img);
         return <ImageCard key={img.id} img={img} />
     })
 
-    if (props.foundImages.length > 0 && props.query !== '') {
-
-    }
-
     return (
         <div className={classes.ImageList}>
+            {(props.foundImages.length === 0 && props.query !== '') && (
+                <p style={{textAlign: 'center'}}>Couldn't find any images. Try searching for another image</p>
+            )}
             {imgs}
         </div>
     );
