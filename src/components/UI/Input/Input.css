@@ -3,3 +3,21 @@
     height: 50px;
     font-size: 24px;
 }
+
+@media only screen and (max-width: 425px)  {
+    .Input {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .Input {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1124px) {
+    .Input {
+        width: 50%;
+    }
+}
