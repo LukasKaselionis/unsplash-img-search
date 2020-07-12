@@ -1,0 +1,15 @@
+.Toolbar {
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 425px)  {
+    .Toolbar {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .Toolbar {
+        margin-bottom: 10px;
+    }
+}

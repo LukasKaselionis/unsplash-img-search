@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from '../../components/UI/Form/Form';
+import classes from './Toolbar.css';
 
 class Toolbar extends Component {
     state = {
@@ -18,7 +19,7 @@ class Toolbar extends Component {
 
     render() {
         return (
-            <div style={{ marginBottom: "40px" }}>
+            <div className={classes.Toolbar}>
                 <Form
                     query={this.state.query}
                     onChange={this.onInputChange}
