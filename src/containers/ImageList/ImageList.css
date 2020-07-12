@@ -7,3 +7,19 @@
     border: 1px solid rgba(0, 0, 0, 0.6);
     overflow: scroll;
 }
+
+@media only screen and (max-width: 425px)  {
+    .ImageList {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .ImageList {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+}
