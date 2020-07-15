@@ -11,7 +11,9 @@ const imageList = (props) => {
     return (
         <div className={classes.ImageList}>
             {(props.foundImages.length === 0 && props.query !== '') && (
-                <p style={{textAlign: 'center'}}>Couldn't find any images. Try searching for another image</p>
+                <p style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 'inherit' }}>
+                    Couldn't find any images. Try searching for another image
+                </p>
             )}
             {imgs}
         </div>
